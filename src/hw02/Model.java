@@ -8,8 +8,8 @@ public class Model {
     private int min = 0;
     private int max = 100;
     private int theDigit;
-    List<Integer> actions = new ArrayList<>();
-    boolean userWon=false;
+    protected List<Integer> actions = new ArrayList<>();
+    protected boolean userWon=false;
 
     public void rand(int min, int max) {
         Random r = new Random();
