@@ -13,7 +13,7 @@ public abstract class SalaryCalculator {
     }
 
     private static double salaryCalculatorEven(Employee employee, String currentMonth) {
-        double salaryWithoutBirthday = (SalaryDB.SALARY_FUND - SalaryDB.getBirthdayFund(AllEmployees.employeeList)) / AllEmployees.getEmployeeNumber();
+        double salaryWithoutBirthday = (SalaryDB.SALARY_FUND - SalaryDB.getBirthdayFund()) / AllEmployees.getEmployeeNumber();
         double salaryWithBirthday;
         double salaryFinal;
         if (employee.getBirthdayMonth().equals(currentMonth)) {
@@ -28,7 +28,7 @@ public abstract class SalaryCalculator {
     private static double salaryCalculatorProportion(List<Employee> employees,Employee employee, String currentMonth){
         int numberOfEmployees = AllEmployees.numberOfEmployeesInDepartment(employees);
         int numberOfDepartments = AllEmployees.numberOfDepartments();
-        double salaryWithoutBirthday = (SalaryDB.SALARY_FUND - SalaryDB.getBirthdayFund(AllEmployees.employeeList)) / numberOfDepartments/numberOfEmployees;
+        double salaryWithoutBirthday = (SalaryDB.SALARY_FUND - SalaryDB.getBirthdayFund()) / numberOfDepartments/numberOfEmployees;
         double salaryWithBirthday;
         double salaryFinal;
         if (employee.getBirthdayMonth().equals(currentMonth)) {
@@ -59,7 +59,7 @@ public abstract class SalaryCalculator {
             case (2):
                 distributeSalaryProportion(AllEmployees.hr,currentMonth);
                 distributeSalaryProportion(AllEmployees.logistics,currentMonth);
-                distributeSalaryProportion(AllEmployees.workers,currentMonth);
+                distributeSalaryProportion(AllEmployees.workers,currentMonth);break;
         }
     }
 

@@ -16,7 +16,7 @@ public abstract class SalaryDB {
         BIRTHDAY_FUND = (SALARY_FUND * BIRTHDAY_GIFT) * employeeNumber;
     }
 
-    public static double getBirthdayFund(List<Employee> employees) {
+    public static double getBirthdayFund() {
         return BIRTHDAY_FUND;
     }
 }
