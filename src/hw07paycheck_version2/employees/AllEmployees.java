@@ -2,7 +2,6 @@ package hw07paycheck_version2.employees;
 
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -167,7 +166,7 @@ public abstract class AllEmployees {
     }
 
     public void sortByWorkDate(List<Employee> employees){
-       Collections.sort(employees, Comparator.comparing(o -> o.getStartWorking().getDate()));
+       employees.sort(Comparator.comparing(o -> o.getStartWorking().getDate()));
     }
     public void fireManager(List<Employee>employees){
         for (Employee e:employees) {
